@@ -50,11 +50,11 @@ function errorToObject (error)
  * ```
  * try
  * {
- *    JSON.parse(someMalformedJSONData);
+ *    JSON.parse(someMalformedServiceData);
  * }
  * catch (error)
  * {
- *    throw new RuntimeError('The data could not be parsed.', error);
+ *    throw new RuntimeError('The service data could not be parsed.', error);
  * }
  * ```
  *

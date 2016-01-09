@@ -15,7 +15,7 @@ Example usage:
 ``` js
 try
 {
-	JSON.parse(someMalformedJSONData);
+	JSON.parse(someMalformedServiceData);
 }
 catch (error)
 {
