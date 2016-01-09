@@ -1,0 +1,56 @@
+{
+	"name" : "runtime-error",
+
+	"version" : "0.1.0",
+
+	"description" : "A better error that is inspired by the Java exception that is also serializable to JSON.",
+
+	"author" :
+	{
+		"name" : "Luke Phillips",
+		"email" : "lsphillips.mail@gmail.com",
+		"url" : "http://www.lsphillips.com"
+	},
+
+	"keywords" :
+	[
+		"error",
+		"serializable",
+		"json",
+		"runtime"
+	],
+
+	"homepage" : "https://github.com/lsphillips/RuntimError",
+
+	"bugs" :
+	{
+		"url" : "https://github.com/lsphillips/RuntimError/issues"
+	},
+	
+	"devDependencies" :
+	{
+		"chai" : "3.4.1",
+		"mocha" : "2.3.4",
+		"eslint" : "1.10.3"
+	},
+
+	"main" : "src/RuntimError.js",
+
+	"repository" :
+	{
+		"type" : "git",
+		"url"  : "https://github.com/lsphillips/RuntimError.git"
+	},
+
+	"scripts" :
+	{
+		"test" : "node scripts/test.js"
+	},
+
+	"license" : "MIT",
+
+	"engines" :
+	{
+		"node" : ">=4.0.0"
+	}
+}
