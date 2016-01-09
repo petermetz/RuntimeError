@@ -50,7 +50,7 @@ function errorToObject (error)
  * ```
  * try
  * {
- *    JSON.parse('malformed JSON');
+ *    JSON.parse(someMalformedJSONData);
  * }
  * catch (error)
  * {
