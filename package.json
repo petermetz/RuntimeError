@@ -1,5 +1,5 @@
 {
-	"name" : "runtime-error",
+	"name" : "run-time-error",
 
 	"version" : "0.1.0",
 
@@ -26,7 +26,7 @@
 	{
 		"url" : "https://github.com/lsphillips/RuntimError/issues"
 	},
-	
+
 	"devDependencies" :
 	{
 		"chai" : "3.4.1",
