@@ -3,8 +3,7 @@
 
 	"env" :
 	{
-		"node"  : true,
-		"mocha" : true
+		"node" : true
 	},
 
 	"ecmaFeatures" :

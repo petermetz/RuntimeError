@@ -1,3 +1,5 @@
+/* eslint-env mocha */
+
 'use strict';
 
 // Dependencies
@@ -40,7 +42,7 @@ describe('class RuntimeError', function ()
 		{
 			// Prepare.
 			let cause = new Error('This is an error.');
-			
+
 			// Act.
 			let error = new RuntimeError(
 				'This is a runtime error.', cause
