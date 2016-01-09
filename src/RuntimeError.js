@@ -7,11 +7,11 @@
  *
  * @private
  *
+ * @static
+ *
  * @returns {String} The plain object representation of the given Error object.
  *
  * @param {Error} error The error object to be converted.
- *
- * @throws {TypeError} When attempting to convert an object which isn't an Error.
  *
  * @memberof RuntimeError
  */
@@ -80,6 +80,8 @@ class RuntimeError extends Error
 		 * @type {Error}
 		 *
 		 * @default null
+		 *
+		 * @memberof RuntimeError
 		 */
 		this.cause = cause || null;
 	}
@@ -87,7 +89,7 @@ class RuntimeError extends Error
 	/**
 	 * Returns this runtime error as a plain object for JSON serialization.
 	 *
-	 * @return {Object} A plain object representation of this runtime error.
+	 * @returns {Object} A plain object representation of this runtime error.
 	 */
 	toJSON ()
 	{
