@@ -1,0 +1,22 @@
+# Files
+# -----------------
+
+.DS_Store
+.eslintrc
+.gitignore
+
+# File Types
+# -----------------
+
+*.db
+*.log
+*.zip
+*.iml
+*.sublime-*
+*.log.*
+
+# Directories
+# -----------------
+
+/scripts
+/tests
