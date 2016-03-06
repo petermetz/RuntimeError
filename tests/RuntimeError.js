@@ -11,9 +11,6 @@ const chai = require('chai');
 
 describe('class RuntimeError', function ()
 {
-	// Test Subject
-	// -------------------------------------------------------
-
 	const RuntimeError = require('../src/RuntimeError');
 
 	// -------------------------------------------------------
