@@ -25,7 +25,7 @@ catch (error)
 
 ## Getting started
 
-It's available through the Node Package Manager (NPM), so you can install it like so:
+This project is available through the Node Package Manager (NPM), so you can install it like so:
 
 ``` sh
 npm install run-time-error
@@ -45,4 +45,4 @@ This also runs code quality checks using ESLint. Please refer to the `.eslintrc`
 
 ## License
 
-This project is released under the MIT License.
+This project is released under the MIT license.

@@ -5,19 +5,22 @@
 // Dependencies
 // --------------------------------------------------------
 
-const mocha  = require('mocha');
 const eslint = require('eslint');
+const mocha  = require('mocha');
+const colors = require('colors');
 
 // --------------------------------------------------------
 
 Promise.resolve()
 
-// 1) Static Analysis
+// Static Analysis
 // --------------------------------------------------------
 
 	.then(function ()
 	{
-		console.log('1) Static Analysis');
+		console.log(
+			colors.underline('Running static analysis (eslint)')
+		);
 
 		let engine = new eslint.CLIEngine(
 		{
@@ -29,18 +32,9 @@ Promise.resolve()
 			'scripts/test.js', 'src/RuntimeError.js', 'tests/RuntimeError.js'
 		]);
 
-		if (report.errorCount > 0 || report.warningCount > 0)
-		{
-			console.log(
-				engine.getFormatter('stylish')(report.results)
-			);
-		}
-		else
-		{
-			console.log('');
-			console.log('No problems or warnings found.');
-			console.log('');
-		}
+		console.log(
+			engine.getFormatter('stylish')(report.results)
+		);
 
 		if (report.errorCount > 0)
 		{
@@ -48,48 +42,47 @@ Promise.resolve()
 		}
 	})
 
-// 2) Tests
+// Unit Tests
 // --------------------------------------------------------
 
 	.then(function ()
 	{
-		console.log('2) Tests');
+		console.log(
+			colors.underline('Running unit tests (mocha)')
+		);
 
 		return new Promise(function (success, failure)
 		{
 			new mocha(
 			{
-				ui : 'bdd', reporter : 'spec'
+				ui : 'bdd', reporter : 'list'
+			})
+				.addFile('tests/RuntimeError.js').run(function (errors)
+				{
+					if (errors)
+					{
+						failure(
+							new Error('Some tests have failed and are requiring your immediate attention.')
+						);
 
-			}).addFile('tests/RuntimeError.js').run(function (errors)
-			{
-				if (errors)
-				{
-					failure(
-						new Error('Some tests have failed and are requiring your immediate attention.')
-					);
-				}
-				else
-				{
+						return;
+					}
+
 					success();
-				}
-			});
+				});
 		});
 	})
 
-// Catch
 // --------------------------------------------------------
 
-	.then(
+	.then(function ()
+	{
+		process.exit(0);
+	})
 
-		// Success.
-		function ()
-		{
-			process.exit(0);
-		},
+// --------------------------------------------------------
 
-		// Failure.
-		function ()
-		{
-			process.exit(1);
-		});
+	.catch(function ()
+	{
+		process.exit(1);
+	});
