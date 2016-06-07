@@ -15,8 +15,8 @@
 	[
 		"error",
 		"serializable",
-		"json",
-		"runtime"
+		"runtime",
+		"exception"
 	],
 
 	"homepage" : "https://github.com/lsphillips/RuntimeError",

@@ -35,7 +35,7 @@ npm install run-time-error
 
 ## Development
 
-This project doesn't require a build process. It does have tests though; which you can run through NPM like so:
+This project doesn't have much of a build process. It does have tests though; which you can run through NPM like so:
 
 ``` sh
 npm test
