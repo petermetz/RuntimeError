@@ -1,5 +1,7 @@
 # RuntimeError
 
+![Travis Build Status](https://travis-ci.org/lsphillips/RuntimeError.svg?branch=master)
+
 A better error that is inspired by the Java exception that is also serializable to JSON.
 
 ## Usage
