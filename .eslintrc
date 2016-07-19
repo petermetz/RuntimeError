@@ -3,14 +3,8 @@
 
 	"env" :
 	{
-		"node" : true
-	},
-
-	"ecmaFeatures" :
-	{
-		"classes"         : true,
-		"blockBindings"   : true,
-		"templateStrings" : true
+		"node" : true,
+		"es6"  : true
 	},
 
 	"rules" :
@@ -37,7 +31,7 @@
 		"no-case-declarations"       : 2,
 		"no-div-regex"               : 2,
 		"no-else-return"             : 2,
-		"no-empty-label"             : 2,
+		"no-labels"                  : 2,
 		"no-eq-null"                 : 2,
 		"no-eval"                    : 2,
 		"no-extend-native"           : 2,

@@ -17,7 +17,7 @@
  */
 function errorToObject (error)
 {
-	let object = { name : error.name, message : error.message };
+	let object = { name : error.name };
 
 	// Now iterate over the error's properties to take into
 	// account non-standard properties.
@@ -73,6 +73,58 @@ class RuntimeError extends Error
 		super(message);
 
 		/**
+		 * The name of the error.
+		 *
+		 * This is redefined to be enumerable unlike `Error#name` because it is usually defined on `Error.prototype`.
+		 *
+		 * @instance
+		 *
+		 * @type {String}
+		 *
+		 * @default 'RuntimeError'
+		 *
+		 * @memberof RuntimeError
+		 */
+		Object.defineProperty(this, 'name',
+		{
+			configurable : true, writable : true, enumerable : true, value : 'RuntimeError'
+		});
+
+		/**
+		 * The error message.
+		 *
+		 * This is redefined to be enumerable unlike `Error#message`.
+		 *
+		 * @instance
+		 *
+		 * @type {String}
+		 *
+		 * @memberof RuntimeError
+		 */
+		Object.defineProperty(this, 'message',
+		{
+			configurable : true, writable : true, enumerable : true, value : this.message
+		});
+
+		/**
+		 * The stack trace describing the point in the code at which this error was instantiated.
+		 *
+		 * This is redefined to be enumerable unlike `Error#stack`.
+		 *
+		 * @instance
+		 *
+		 * @type {Error}
+		 *
+		 * @default null
+		 *
+		 * @memberof RuntimeError
+		 */
+		Object.defineProperty(this, 'stack',
+		{
+			configurable : true, writable : true, enumerable : true, value : this.stack
+		});
+
+		/**
 		 * The error that caused this runtime error.
 		 *
 		 * @instance
@@ -83,7 +135,10 @@ class RuntimeError extends Error
 		 *
 		 * @memberof RuntimeError
 		 */
-		this.cause = cause || null;
+		Object.defineProperty(this, 'cause',
+		{
+			configurable : true, writable : true, enumerable : true, value : cause || null
+		});
 	}
 
 	/**
@@ -96,18 +151,6 @@ class RuntimeError extends Error
 		return errorToObject(this);
 	}
 }
-
-// --------------------------------------------------------
-
-// To maintain consistency with the native Error types; the
-// `name` property is defined on the prototype object.
-//
-// I guess it's done this way to be more memory effecient
-// as it's an instance property that won't normally change.
-//
-// The ECMAScript 6 class syntax doesn't allow property
-// definitions, hence why we set it the old fashion way.
-RuntimeError.prototype.name = 'RuntimeError';
 
 // --------------------------------------------------------
 

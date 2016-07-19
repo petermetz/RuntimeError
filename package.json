@@ -1,7 +1,7 @@
 {
 	"name" : "run-time-error",
 
-	"version" : "0.2.1",
+	"version" : "0.3.0",
 
 	"description" : "A better error that is inspired by the Java exception that is also serializable to JSON.",
 
@@ -28,9 +28,9 @@
 
 	"devDependencies" :
 	{
-		"chai" : "3.4.1",
-		"mocha" : "2.3.4",
-		"eslint" : "1.10.3",
+		"chai" : "3.5.0",
+		"mocha" : "2.5.3",
+		"eslint" : "3.1.1",
 		"colors" : "1.1.2"
 	},
 
