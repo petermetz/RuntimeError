@@ -68,7 +68,7 @@ class RuntimeError extends Error
 	 * @param {String} message The error message.
 	 * @param {Error}  [cause] The error that caused this error.
 	 */
-	constructor (message, cause)
+	constructor (message, cause = null)
 	{
 		super(message);
 
@@ -137,7 +137,7 @@ class RuntimeError extends Error
 		 */
 		Object.defineProperty(this, 'cause',
 		{
-			configurable : true, writable : true, enumerable : true, value : cause || null
+			configurable : true, writable : true, enumerable : true, value : cause
 		});
 	}
 

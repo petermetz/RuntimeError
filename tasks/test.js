@@ -6,7 +6,7 @@
 // --------------------------------------------------------
 
 const eslint = require('eslint');
-const mocha  = require('mocha');
+const Mocha  = require('mocha');
 const colors = require('colors');
 
 // --------------------------------------------------------
@@ -29,7 +29,7 @@ Promise.resolve()
 
 		let report = engine.executeOnFiles(
 		[
-			'scripts/test.js', 'src/RuntimeError.js', 'tests/RuntimeError.js'
+			'tasks/test.js', 'src/RuntimeError.js', 'tests/RuntimeError.test.js'
 		]);
 
 		console.log(
@@ -53,11 +53,11 @@ Promise.resolve()
 
 		return new Promise(function (success, failure)
 		{
-			new mocha(
+			new Mocha(
 			{
-				ui : 'bdd', reporter : 'list'
+				ui : 'bdd', reporter : 'spec'
 			})
-				.addFile('tests/RuntimeError.js').run(function (errors)
+				.addFile('tests/RuntimeError.test.js').run(function (errors)
 				{
 					if (errors)
 					{

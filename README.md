@@ -34,7 +34,7 @@ This project is available through the Node Package Manager (NPM), so you can ins
 npm install run-time-error
 ```
 
-**Please Note:** Versions of Node lower than v4.0.0 are not supported, this is because it is written using ECMAScript 6 features.
+**Please Note:** Versions of Node lower than v6.0.0 are not supported, this is because it is written using ECMAScript 6 features.
 
 ## Development
 
