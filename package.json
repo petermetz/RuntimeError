@@ -1,7 +1,7 @@
 {
 	"name" : "run-time-error",
 
-	"version" : "0.3.1",
+	"version" : "0.3.2",
 
 	"description" : "A better error that is inspired by the Java exception that is also serializable to JSON.",
 
@@ -52,5 +52,7 @@
 	"engines" :
 	{
 		"node" : ">=6.0.0"
-	}
+	},
+
+	"types" : "RuntimeError.d.ts"
 }
