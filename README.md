@@ -46,6 +46,8 @@ npm test
 
 This also runs code quality checks using ESLint. Please refer to the `.eslintrc` file to familiar yourself with the rules.
 
+**Please Note:** This requires a POSIX compliant environment to run.
+
 ## License
 
 This project is released under the MIT license.
