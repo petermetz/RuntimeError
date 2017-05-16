@@ -72,6 +72,8 @@ class RuntimeError extends Error
 	{
 		super(message);
 
+		// ------------------------------------------------------
+
 		/**
 		 * The name of the error.
 		 *
@@ -90,6 +92,8 @@ class RuntimeError extends Error
 			configurable : true, writable : true, enumerable : true, value : 'RuntimeError'
 		});
 
+		// ------------------------------------------------------
+
 		/**
 		 * The error message.
 		 *
@@ -105,6 +109,8 @@ class RuntimeError extends Error
 		{
 			configurable : true, writable : true, enumerable : true, value : this.message
 		});
+
+		// ------------------------------------------------------
 
 		/**
 		 * The stack trace describing the point in the code at which this error was instantiated.
@@ -124,6 +130,8 @@ class RuntimeError extends Error
 			configurable : true, writable : true, enumerable : true, value : this.stack
 		});
 
+		// ------------------------------------------------------
+
 		/**
 		 * The error that caused this runtime error.
 		 *
@@ -140,6 +148,8 @@ class RuntimeError extends Error
 			configurable : true, writable : true, enumerable : true, value : cause
 		});
 	}
+
+	// -------------------------------------------------------
 
 	/**
 	 * Returns this runtime error as a plain object for JSON serialization.

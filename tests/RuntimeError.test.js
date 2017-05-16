@@ -26,6 +26,8 @@ describe('class RuntimeError', function ()
 			chai.expect(error).to.be.an.instanceof(Error);
 		});
 
+		// ------------------------------------------------------
+
 		it('shall create a runtime error with a `name` set to `RuntimeError`', function ()
 		{
 			// Act.
@@ -34,6 +36,8 @@ describe('class RuntimeError', function ()
 			// Assert.
 			chai.expect(error.name).to.equal('RuntimeError');
 		});
+
+		// ------------------------------------------------------
 
 		it('shall create a runtime error with a given `message` and `cause`', function ()
 		{
@@ -50,6 +54,8 @@ describe('class RuntimeError', function ()
 			chai.expect(error.cause).to.equal(cause);
 		});
 
+		// ------------------------------------------------------
+
 		it('shall create a runtime error with a `cause` set to `null` when no cause is provided', function ()
 		{
 			// Act.
@@ -59,6 +65,8 @@ describe('class RuntimeError', function ()
 			chai.expect(error.cause).to.be.null;
 		});
 
+		// ------------------------------------------------------
+
 		it('shall create a runtime error with a `message` set to `` (an empty string) when no message is provided', function ()
 		{
 			// Act.
@@ -67,6 +75,8 @@ describe('class RuntimeError', function ()
 			// Assert.
 			chai.expect(error.message).to.equal('');
 		});
+
+		// ------------------------------------------------------
 
 		it('shall create a runtime error with the `message`, `name`, `stack` and `cause` properties being enumerable', function ()
 		{
@@ -102,6 +112,8 @@ describe('class RuntimeError', function ()
 			});
 		});
 
+		// ------------------------------------------------------
+
 		it('shall return a plain object containing a `cause` property set to the target runtime error cause recursively converted to a plain object with all its properties (enemerable, or non-enemerable) copied to it', function ()
 		{
 			// Prepare.
@@ -127,6 +139,8 @@ describe('class RuntimeError', function ()
 			});
 		});
 
+		// ------------------------------------------------------
+
 		it('shall return a plain object with a `cause` property set to `null` if the target runtime error does not have a cause', function ()
 		{
 			// Prepare.
@@ -138,6 +152,8 @@ describe('class RuntimeError', function ()
 			// Assert.
 			chai.expect(object.cause).to.equal(null);
 		});
+
+		// ------------------------------------------------------
 
 		it('shall return a plain object containing any additional properties (enemerable, or non-enemerable) copied to it', function ()
 		{
