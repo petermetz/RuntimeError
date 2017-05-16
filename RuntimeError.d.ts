@@ -11,7 +11,7 @@ declare class RuntimeError extends Error
 
 	// ----------------------------------------------------
 
-	toJSON() : string;
+	toJSON() : Object;
 }
 
 // --------------------------------------------------------
