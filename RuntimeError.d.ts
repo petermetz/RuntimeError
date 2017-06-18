@@ -16,4 +16,4 @@ declare class RuntimeError extends Error
 
 // --------------------------------------------------------
 
-export = RuntimeError;
+export default RuntimeError;
