@@ -1,7 +1,5 @@
 'use strict';
 
-// --------------------------------------------------------
-
 /**
  * Converts an Error object into a plain object.
  *
@@ -21,7 +19,7 @@ function errorToObject (error)
 
 	// Now iterate over the error's properties to take into
 	// account non-standard properties.
-	Object.getOwnPropertyNames(error).forEach(function (key)
+	Object.getOwnPropertyNames(error).forEach(key =>
 	{
 		let value = error[key];
 
@@ -72,8 +70,6 @@ class RuntimeError extends Error
 	{
 		super(message);
 
-		// ------------------------------------------------------
-
 		/**
 		 * The name of the error.
 		 *
@@ -87,12 +83,9 @@ class RuntimeError extends Error
 		 *
 		 * @memberof RuntimeError
 		 */
-		Object.defineProperty(this, 'name',
-		{
+		Object.defineProperty(this, 'name', {
 			configurable : true, writable : true, enumerable : true, value : 'RuntimeError'
 		});
-
-		// ------------------------------------------------------
 
 		/**
 		 * The error message.
@@ -105,12 +98,9 @@ class RuntimeError extends Error
 		 *
 		 * @memberof RuntimeError
 		 */
-		Object.defineProperty(this, 'message',
-		{
+		Object.defineProperty(this, 'message', {
 			configurable : true, writable : true, enumerable : true, value : this.message
 		});
-
-		// ------------------------------------------------------
 
 		/**
 		 * The stack trace describing the point in the code at which this error was instantiated.
@@ -125,12 +115,9 @@ class RuntimeError extends Error
 		 *
 		 * @memberof RuntimeError
 		 */
-		Object.defineProperty(this, 'stack',
-		{
+		Object.defineProperty(this, 'stack', {
 			configurable : true, writable : true, enumerable : true, value : this.stack
 		});
-
-		// ------------------------------------------------------
 
 		/**
 		 * The error that caused this runtime error.
@@ -143,13 +130,10 @@ class RuntimeError extends Error
 		 *
 		 * @memberof RuntimeError
 		 */
-		Object.defineProperty(this, 'cause',
-		{
+		Object.defineProperty(this, 'cause', {
 			configurable : true, writable : true, enumerable : true, value : cause
 		});
 	}
-
-	// -------------------------------------------------------
 
 	/**
 	 * Returns this runtime error as a plain object for JSON serialization.
