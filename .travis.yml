@@ -15,7 +15,7 @@ deploy:
     provider: npm
     on:
         tags: true
-        node: "6"
+        node: "9"
     api_key:
         secure: "jZudzpxRaBHX7cMOV0qSjt58GrPba9x4kktRiPnpVD9kO7jPByLraF+rwGUnAyPb4AuW/dqOMV+RuOnbjKzkp/lYJdwHKicqn/JYIKEqzaSL4t8M8so+TjdltYbxvE0vsiIGcKvEg2uj7dX7zxj3IhX34TdMseWtAtTvXwjVzVPyq7W9//0ezPhV3Az9SfDqVeppJ1ZWYhnZjoFynzJaSiNQLzDSR0kUsA82jYhnwKTMYym3QI7oDz0cdRrI9a5LTbTWals2Rv8nn/s24Nd03vqGyyTo1DLd/EVYM892u0Cq6bHMSJb2BMPD6gOKEaBOG6UE8efoWUqkAgtE8OLvyKTQ+5AN1n7+KcuRTSJR9tDlKPmmQ7nuqW/AQ0L/p1vA85vAD9psIKxCeWrNQvjdAHrSbAK+yGpZfk6qhjUY8CNIeIv44UU6XcI/ntSXdLXyaInrSuuZ7p559y1JV95Z3P5atdD0tYEspxtPY2Yx4ZwrFrxCeSs0eIzdgfF+9fR/m5bk/3HsjHhHg6sOZRNG5H35kXsOX7fTultfdOYEopTugKNOLKurBROIZRWPDoeRwF93sB4SI0C1iQaSMVS2Kki90KMeRsFBqLEisxIyLXXPC0ENpr0M0cwTc3WfACi5d5USI9PLwMcdDJoUkt7vVTua1lXpdObMk+OSM9a/Aws="
     email: "lsphillips.mail@gmail.com"
