@@ -1,7 +1,7 @@
 {
 	"name" : "run-time-error",
 
-	"version" : "1.0.1",
+	"version" : "1.1.0",
 
 	"description" : "A better error that is inspired by the Java exception that is also serializable to JSON.",
 
