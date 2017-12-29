@@ -1,0 +1,19 @@
+{
+    "extends" :
+    [
+        "protect-me-from-my-stupidity",
+        "protect-me-from-my-stupidity/but-let-me-write-stupid-tests"
+    ],
+
+    "env" :
+    {
+        "node"  : true,
+        "es6"   : true,
+        "mocha" : true
+    },
+
+    "parserOptions" :
+    {
+        "sourceType" : "script"
+    }
+}
