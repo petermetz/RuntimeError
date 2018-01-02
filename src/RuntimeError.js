@@ -17,14 +17,10 @@ function errorToObject (error)
 {
 	let object = { name : error.name };
 
-	// Now iterate over the error's properties to take into
-	// account non-standard properties.
 	Object.getOwnPropertyNames(error).forEach(key =>
 	{
 		let value = error[key];
 
-		// If a property is an Error, like `RuntimeError#cause`,
-		// convert that into an object correctly too.
 		if (value instanceof Error)
 		{
 			object[key] = errorToObject(value);
