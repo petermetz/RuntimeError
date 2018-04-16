@@ -22,6 +22,9 @@ describe('class RuntimeError', function ()
 			let error = new RuntimeError();
 
 			// Assert.
+			expect(error).to.be.an.instanceof(RuntimeError);
+
+			// Assert.
 			expect(error).to.be.an.instanceof(Error);
 		});
 
