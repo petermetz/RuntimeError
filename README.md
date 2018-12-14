@@ -5,15 +5,7 @@
 
 A better error that is inspired by the Java exception that is also serializable to JSON.
 
-## Usage
-
-The RuntimeError constructor has this signature:
-
-```
-RuntimeError(String message [, Error cause])
-```
-
-Example usage:
+## Example Usage
 
 ``` js
 try
