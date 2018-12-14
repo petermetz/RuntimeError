@@ -1,16 +1,11 @@
 'use strict';
 
-// Dependencies
-// --------------------------------------------------------
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-const { expect } = require('chai');
-
-// Subjects
-// --------------------------------------------------------
-
+const { expect }   = require('chai');
 const RuntimeError = require('../src/RuntimeError');
 
-// --------------------------------------------------------
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 describe('class RuntimeError', function ()
 {

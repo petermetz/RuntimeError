@@ -1,7 +1,7 @@
 {
 	"name" : "run-time-error",
 
-	"version" : "1.1.0",
+	"version" : "1.2.0",
 
 	"description" : "A better error that is inspired by the Java exception that is also serializable to JSON.",
 
@@ -41,13 +41,13 @@
 	"repository" :
 	{
 		"type" : "git",
-		"url"  : "https://github.com/lsphillips/RuntimeError.git"
+		"url" : "https://github.com/lsphillips/RuntimeError.git"
 	},
 
 	"scripts" :
 	{
-		"lint" : "eslint 'src/**/*.js' 'tests/**/*.js'",
-		"unit" : "mocha 'tests/**/*.js'",
+		"lint" : "eslint \"src/**/*.js\" \"tests/**/*.js\"",
+		"unit" : "mocha \"tests/**/*.js\"",
 		"test" : "npm run lint && npm run unit"
 	},
 

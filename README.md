@@ -18,11 +18,11 @@ Example usage:
 ``` js
 try
 {
-	JSON.parse(someMalformedServiceData);
+  throw new Error('The root cause error.');
 }
-catch (error)
+catch (cause)
 {
-	throw new RuntimeError('The service data could not be parsed.', error);
+  throw new RuntimeError('An unexpected error occurred while performing an operation.', cause);
 }
 ```
 

@@ -2,6 +2,12 @@
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.2.0] (2018-12-14)
+
+### Added
+
+- Introduced documentation to the Typescript type definitons.
+
 ## [1.1.0] (2017-12-29)
 
 A code quality release; no functionality changes.
