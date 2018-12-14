@@ -22,7 +22,7 @@ export default class RuntimeError extends Error
 	 * @param message The error message.
 	 * @param cause   The error that caused the error.
 	 */
-	constructor(message : string, cause? : Error);
+	constructor(message : string, cause? : Error | string);
 
 	/**
 	 * The error that caused this error.
