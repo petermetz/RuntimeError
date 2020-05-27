@@ -1,7 +1,7 @@
 # RuntimeError
 
 [![Available from NPM](https://img.shields.io/npm/v/run-time-error.svg?maxAge=900)](https://www.npmjs.com/package/run-time-error)
-[![Built using Travis](https://img.shields.io/travis/lsphillips/RuntimeError/master.svg?maxAge=900)](https://travis-ci.org/lsphillips/RuntimeError)
+[![Built using Travis](https://img.shields.io/travis/com/lsphillips/RuntimeError/master.svg?maxAge=900)](https://travis-ci.com/lsphillips/RuntimeError)
 
 A better error that is inspired by the Java exception that is also serializable to JSON.
 
