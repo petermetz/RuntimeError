@@ -46,9 +46,9 @@
 
 	"scripts" :
 	{
-		"lint"    : "eslint \"src/**/*.js\" \"tests/**/*.js\"",
-		"unit"    : "mocha \"tests/**/*.js\"",
-        "test"    : "npm run lint && npm run unit",
+		"lint" : "eslint \"src/**/*.js\" \"tests/**/*.js\"",
+		"unit" : "mocha \"tests/**/*.js\"",
+        "test" : "npm run lint && npm run unit",
         "prepack" : "npm run test"
 	},
 
