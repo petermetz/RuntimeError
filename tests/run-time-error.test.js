@@ -3,7 +3,7 @@
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 const { expect }   = require('chai');
-const RuntimeError = require('../src/RuntimeError');
+const RuntimeError = require('../src/run-time-error');
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
