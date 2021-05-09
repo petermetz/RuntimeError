@@ -6,7 +6,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ### Changed
 
-- Support for Node.js version 10.x.x has been dropped.
+- Support for Node.js version `10.x.x` has been dropped.
 
 ## [1.2.0] (2018-12-14)
 
