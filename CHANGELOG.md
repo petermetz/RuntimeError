@@ -7,7 +7,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 ### Changed
 
 - Removed unnecessary files from the package making it more lightweight.
-- Moved to named exports so you have to import the error type like so:
+- Moved to named exports so you have to import this module like so:
   ``` js
   import { RuntimeError } from 'run-time-error';
   ```
