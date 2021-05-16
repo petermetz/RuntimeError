@@ -2,6 +2,20 @@
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.4.0] (2021-05-16)
+
+### Changed
+
+- Removed unnecessary files from the package making it more lightweight.
+- Moved to named exports so you have to import the error type like so:
+  ``` js
+  import { RuntimeError } from 'run-time-error';
+  ```
+
+### Added
+
+- Introduced ESM and UMD versions of this module, each with an ES5 version for browser environments.
+
 ## [1.3.0] (2021-05-09)
 
 ### Changed

@@ -1,7 +1,9 @@
 {
 	"name" : "run-time-error",
 
-	"version" : "1.3.0",
+	"version" : "1.4.0",
+
+    "type" : "module",
 
 	"description" : "A better error that is inspired by the Java exception that is also serializable to JSON.",
 
@@ -31,12 +33,46 @@
 		"chai" : "4.3.4",
 		"mocha" : "8.4.0",
 		"eslint" : "7.26.0",
-		"eslint-plugin-import" : "2.22.1",
+		"eslint-plugin-import" : "2.23.2",
 		"eslint-plugin-promise" : "5.1.0",
-		"eslint-config-protect-me-from-my-stupidity" : "7.0.0"
+		"eslint-config-protect-me-from-my-stupidity" : "7.2.2",
+        "@babel/core" : "7.14.2",
+        "@babel/preset-env" : "7.14.2",
+        "rollup" : "2.48.0",
+        "rollup-plugin-terser" : "7.0.2",
+        "@rollup/plugin-babel" : "5.3.0"
 	},
 
-	"main" : "src/run-time-error.js",
+	"main" : "run-time-error.cjs",
+
+    "exports" :
+    {
+        "node" :
+        {
+            "import" : "./run-time-error.js",
+            "require" : "./run-time-error.cjs"
+        },
+
+        "browser" :
+        {
+            "import" : "./run-time-error.es5.js",
+            "require" : "./run-time-error.es5.cjs"
+        },
+
+        "default" : "./run-time-error.js"
+    },
+
+    "files" :
+    [
+        "/README.md",
+        "/CHANGELOG.md",
+        "/LICENSE.txt",
+        "/run-time-error.js",
+        "/run-time-error.cjs",
+        "/run-time-error.es5.js",
+        "/run-time-error.es5.cjs",
+        "/run-time-error.d.ts"
+    ],
 
 	"repository" :
 	{
@@ -46,10 +82,11 @@
 
 	"scripts" :
 	{
-		"test:lint" : "eslint \"src/**/*.js\" \"tests/**/*.js\"",
+		"test:lint" : "eslint \"**/*.js\" --ignore-path .gitignore",
 		"test:unit" : "mocha \"tests/**/*.js\"",
         "test" : "npm run test:lint && npm run test:unit",
-        "prepack" : "npm run test"
+        "build" : "rollup --config",
+        "prepack" : "npm run test && npm run build"
 	},
 
 	"license" : "MIT",

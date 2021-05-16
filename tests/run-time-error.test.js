@@ -1,9 +1,5 @@
-'use strict';
-
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-const { expect }   = require('chai');
-const RuntimeError = require('../src/run-time-error');
+import { expect }       from 'chai';
+import { RuntimeError } from '../src/run-time-error.js';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 

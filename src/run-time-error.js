@@ -1,7 +1,3 @@
-'use strict';
-
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
 function errorToObject (error)
 {
 	let object = { name : error.name };
@@ -25,7 +21,7 @@ function errorToObject (error)
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-module.exports = class RuntimeError extends Error
+export class RuntimeError extends Error
 {
 	constructor (message, cause = null)
 	{
@@ -52,4 +48,4 @@ module.exports = class RuntimeError extends Error
 	{
 		return errorToObject(this);
 	}
-};
+}

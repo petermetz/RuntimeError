@@ -3,13 +3,7 @@
 
 	"env" :
 	{
-		"node" : true,
-		"es6"  : true
-	},
-
-	"parserOptions" :
-	{
-		"sourceType" : "script"
+		"es6" : true
 	},
 
 	"root" : true

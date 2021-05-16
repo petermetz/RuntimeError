@@ -5,9 +5,11 @@
 
 A better error that is inspired by the Java exception that is also serializable to JSON.
 
-## Example Usage
+## Usage
 
 ``` js
+import { RuntimeError } from 'run-time-error';
+
 try
 {
   throw new Error('The root cause error.');
@@ -16,6 +18,12 @@ catch (cause)
 {
   throw new RuntimeError('An unexpected error occurred while performing an operation.', cause);
 }
+```
+
+This module can also be treated as a CommonJS module:
+
+``` js
+const { RuntimeError } = require('run-time-error');
 ```
 
 ## Getting started
@@ -30,7 +38,17 @@ npm install run-time-error
 
 ## Development
 
-This project doesn't have much of a build process. It does have tests though; which you can run like so:
+### Building
+
+You can build UMD and ESM versions of this module that are minified:
+
+``` sh
+npm run build
+```
+
+### Testing
+
+This module also has a robust test suite:
 
 ``` sh
 npm test
