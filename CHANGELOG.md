@@ -7,9 +7,11 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 ### Changed
 
 - Removed unnecessary files from the package making it more lightweight.
-- Moved to named exports so you have to import this module like so:
+- Moved to named exports, so importing this should now look like this:
   ``` js
   import { RuntimeError } from 'run-time-error';
+  // instead of
+  import RuntimeError from 'run-time-error';
   ```
 
 ### Added
