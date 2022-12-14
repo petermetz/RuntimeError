@@ -1,4 +1,4 @@
-name: Build and Test
+name: Build
 
 on:
   push:
@@ -25,7 +25,7 @@ jobs:
           - '16'
           - '18'
 
-    name: Build and Test on Node v${{ matrix.node }}
+    name: Build & Test on Node v${{ matrix.node }}
 
     steps:
 

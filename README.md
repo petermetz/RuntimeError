@@ -1,7 +1,7 @@
 # RuntimeError
 
 [![Available from NPM](https://img.shields.io/npm/v/run-time-error.svg?maxAge=900)](https://www.npmjs.com/package/run-time-error)
-[![Built using GitHub Action](https://github.com/lsphillips/RuntimeError/actions/workflows/build-and-test.yml/badge.svg?branch=master)](https://github.com/lsphillips/RuntimeError/actions)
+[![Built using GitHub Action](https://github.com/lsphillips/RuntimeError/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/lsphillips/RuntimeError/actions)
 
 A better error that is inspired by the Java exception that is also serializable to JSON.
 
