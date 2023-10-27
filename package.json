@@ -43,35 +43,24 @@
         "@rollup/plugin-babel" : "6.0.4"
 	},
 
-	"main" : "run-time-error.cjs",
+	"main": "./dist/cjs/run-time-error.cjs",
+	"types": "./dist/cjs/run-time-error.d.ts",
 
-    "exports" :
-    {
-        "node" :
-        {
-            "import" : "./run-time-error.js",
-            "require" : "./run-time-error.cjs"
-        },
-
-        "browser" :
-        {
-            "import" : "./run-time-error.es5.js",
-            "require" : "./run-time-error.es5.cjs"
-        },
-
-        "default" : "./run-time-error.js"
-    },
+    "exports": {
+		".": {
+			"types": "./dist/cjs/run-time-error.d.ts",
+			"require": "./dist/cjs/run-time-error.cjs"
+		}
+	},
 
     "files" :
     [
-        "/README.md",
-        "/CHANGELOG.md",
-        "/LICENSE.txt",
-        "/run-time-error.js",
-        "/run-time-error.cjs",
-        "/run-time-error.es5.js",
-        "/run-time-error.es5.cjs",
-        "/run-time-error.d.ts"
+        "./README.md",
+        "./CHANGELOG.md",
+        "./LICENSE.txt",
+		"dist",
+		"./run-time-error.esm.d.ts",
+		"./run-time-error.cjs.d.ts"
     ],
 
 	"repository" :
@@ -85,7 +74,7 @@
 		"test:lint" : "eslint \"**/*.js\" --ignore-path .gitignore",
 		"test:unit" : "mocha \"tests/**/*.js\"",
         "test" : "npm run test:lint && npm run test:unit",
-        "build" : "rollup --config",
+        "build" : "rollup --config && node ./render-manifests.js",
         "prepack" : "npm run test && npm run build"
 	},
 
@@ -94,7 +83,5 @@
 	"engines" :
 	{
 		"node" : ">=12.0.0"
-	},
-
-	"types" : "run-time-error.d.ts"
+	}
 }

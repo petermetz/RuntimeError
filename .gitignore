@@ -6,10 +6,7 @@
 # Build
 # -----------------
 
-/run-time-error.js
-/run-time-error.cjs
-/run-time-error.es5.js
-/run-time-error.es5.cjs
+dist/
 
 # Pack
 # -----------------

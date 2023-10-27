@@ -28,14 +28,14 @@ function bundle (output, {
 export default
 [
 	bundle({
-		file : 'run-time-error.es5.js',
+		file : './dist/esm/run-time-error.es5.js',
 		format : 'esm'
 	}, {
 		transpile : true
 	}),
 
 	bundle({
-		file : 'run-time-error.es5.cjs',
+		file : './dist/umd/run-time-error.es5.cjs',
 		format : 'umd',
 		name : 'run-time-error',
 		exports : 'named'
@@ -44,13 +44,13 @@ export default
 	}),
 
 	bundle({
-		file : 'run-time-error.cjs',
+		file : './dist/cjs/run-time-error.cjs',
 		format : 'cjs',
 		exports : 'named'
 	}),
 
 	bundle({
-		file : 'run-time-error.js',
+		file : './dist/esm/run-time-error.js',
 		format : 'esm'
 	})
 ];
